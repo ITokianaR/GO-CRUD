@@ -1,19 +1,19 @@
 package main
 
 import (
-    "GO-CRUD/models"
-    "GO-CRUD/controllers"
+	"GO-CRUD/controllers"
+	"GO-CRUD/models"
 
-    "github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-    router := gin.Default()
+	router := gin.Default()
 
-    models.InitDb()
+	models.InitDb()
 
-    //routes list
-    router.POST("/post", controllers.CreatePost)
+	//routes list
+	router.POST("/post", controllers.CreatePost)
 
-    router.Run("localhost:8080")
+	router.Run("localhost:8080")
 }
